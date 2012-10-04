@@ -1,0 +1,14 @@
+Things TODO
+===========
+
+- Create a Config singleton, to point to localhost or some staging server.
+- Finish StatusTableCell.
+- PostStatusViewController.
+- StatusModel - A remote model class to load and create statuses. Or we can call it StatusController. Mmmmm.
+
+
+Graphics
+--------
+
+- App icon
+- Fun tab bar icons (check Glyphish)
