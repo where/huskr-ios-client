@@ -1,3 +1,6 @@
 [submodule "Huskr/Libraries/nimbus"]
 	path = Huskr/Libraries/nimbus
 	url = git://github.com/jverkoey/nimbus.git
+[submodule "Huskr/Libraries/MBProgressHUD"]
+	path = Huskr/Libraries/MBProgressHUD
+	url = git://github.com/matej/MBProgressHUD.git

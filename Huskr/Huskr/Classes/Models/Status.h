@@ -15,8 +15,9 @@
 
 }
 
+@property (nonatomic, copy) NSNumber *objectID;
 @property (nonatomic, copy) NSString *username;
-@property (nonatomic, copy) NSString *status;
+@property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) NSDate *createdDate;
 @property (nonatomic, strong) NSDate *updatedDate;
 

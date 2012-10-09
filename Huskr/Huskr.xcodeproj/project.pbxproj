@@ -13,9 +13,6 @@
 		7FADF9FF161D224800229010 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FADF9FD161D224800229010 /* InfoPlist.strings */; };
 		7FADFA01161D224800229010 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADFA00161D224800229010 /* main.m */; };
 		7FADFA05161D224800229010 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADFA04161D224800229010 /* AppDelegate.m */; };
-		7FADFA07161D224800229010 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FADFA06161D224800229010 /* Default.png */; };
-		7FADFA09161D224800229010 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FADFA08161D224800229010 /* Default@2x.png */; };
-		7FADFA0B161D224800229010 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FADFA0A161D224800229010 /* Default-568h@2x.png */; };
 		7FADFA10161D224800229010 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FADFA0F161D224800229010 /* first.png */; };
 		7FADFA12161D224800229010 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FADFA11161D224800229010 /* first@2x.png */; };
 		7FADFA15161D224800229010 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADFA14161D224800229010 /* SecondViewController.m */; };
@@ -67,6 +64,10 @@
 		7FC54AFC1623B69800D6A4C3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC54AF71623B69800D6A4C3 /* Icon.png */; };
 		7FC54AFD1623B69800D6A4C3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC54AF81623B69800D6A4C3 /* Icon@2x.png */; };
 		7FC54B0A1623B6D900D6A4C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC54B091623B6D900D6A4C3 /* Default-568h@2x.png */; };
+		7FC54B0D1623B82C00D6A4C3 /* StatusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC54B0C1623B82C00D6A4C3 /* StatusController.m */; };
+		7FC54B101623B84600D6A4C3 /* ConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC54B0F1623B84600D6A4C3 /* ConfigManager.m */; };
+		7FC54B1E1623CA8400D6A4C3 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC54B1D1623CA8400D6A4C3 /* MBProgressHUD.m */; };
+		7FC54B211623CFBD00D6A4C3 /* CreateStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC54B201623CFBD00D6A4C3 /* CreateStatusViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,9 +91,6 @@
 		7FADFA02161D224800229010 /* Huskr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Huskr-Prefix.pch"; sourceTree = "<group>"; };
 		7FADFA03161D224800229010 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7FADFA04161D224800229010 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7FADFA06161D224800229010 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		7FADFA08161D224800229010 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		7FADFA0A161D224800229010 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7FADFA0F161D224800229010 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		7FADFA11161D224800229010 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		7FADFA13161D224800229010 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -191,6 +189,14 @@
 		7FC54AF71623B69800D6A4C3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		7FC54AF81623B69800D6A4C3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		7FC54B091623B6D900D6A4C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7FC54B0B1623B82C00D6A4C3 /* StatusController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusController.h; sourceTree = "<group>"; };
+		7FC54B0C1623B82C00D6A4C3 /* StatusController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusController.m; sourceTree = "<group>"; };
+		7FC54B0E1623B84600D6A4C3 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
+		7FC54B0F1623B84600D6A4C3 /* ConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigManager.m; sourceTree = "<group>"; };
+		7FC54B1C1623CA8400D6A4C3 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Libraries/MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
+		7FC54B1D1623CA8400D6A4C3 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Libraries/MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
+		7FC54B1F1623CFBD00D6A4C3 /* CreateStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateStatusViewController.h; sourceTree = "<group>"; };
+		7FC54B201623CFBD00D6A4C3 /* CreateStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateStatusViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,9 +280,6 @@
 				7FADF9FD161D224800229010 /* InfoPlist.strings */,
 				7FADFA00161D224800229010 /* main.m */,
 				7FADFA02161D224800229010 /* Huskr-Prefix.pch */,
-				7FADFA06161D224800229010 /* Default.png */,
-				7FADFA08161D224800229010 /* Default@2x.png */,
-				7FADFA0A161D224800229010 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 		7FADFA3D161D232F00229010 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				7FC54B1B1623CA7A00D6A4C3 /* MBProgressHUD */,
 				7FADFAC4161D238E00229010 /* AFNetworking */,
 				7FADFAE1161D23AC00229010 /* JSONKit */,
 				7FADFA3E161D233D00229010 /* nimbus */,
@@ -472,6 +476,10 @@
 		7FADFAEB161D24A500229010 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7FC54B0B1623B82C00D6A4C3 /* StatusController.h */,
+				7FC54B0C1623B82C00D6A4C3 /* StatusController.m */,
+				7FC54B0E1623B84600D6A4C3 /* ConfigManager.h */,
+				7FC54B0F1623B84600D6A4C3 /* ConfigManager.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -490,6 +498,8 @@
 			children = (
 				7FADFAFB161D250900229010 /* StatusListViewController.h */,
 				7FADFAFC161D250900229010 /* StatusListViewController.m */,
+				7FC54B1F1623CFBD00D6A4C3 /* CreateStatusViewController.h */,
+				7FC54B201623CFBD00D6A4C3 /* CreateStatusViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -513,6 +523,15 @@
 				7FC54AF81623B69800D6A4C3 /* Icon@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7FC54B1B1623CA7A00D6A4C3 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7FC54B1C1623CA8400D6A4C3 /* MBProgressHUD.h */,
+				7FC54B1D1623CA8400D6A4C3 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,9 +606,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FADF9FF161D224800229010 /* InfoPlist.strings in Resources */,
-				7FADFA07161D224800229010 /* Default.png in Resources */,
-				7FADFA09161D224800229010 /* Default@2x.png in Resources */,
-				7FADFA0B161D224800229010 /* Default-568h@2x.png in Resources */,
 				7FADFA10161D224800229010 /* first.png in Resources */,
 				7FADFA12161D224800229010 /* first@2x.png in Resources */,
 				7FADFA17161D224800229010 /* second.png in Resources */,
@@ -672,6 +688,10 @@
 				7FADFAFD161D250900229010 /* StatusListViewController.m in Sources */,
 				7FADFB00161D259900229010 /* Status.m in Sources */,
 				7FADFB03161D294000229010 /* StatusTableCell.m in Sources */,
+				7FC54B0D1623B82C00D6A4C3 /* StatusController.m in Sources */,
+				7FC54B101623B84600D6A4C3 /* ConfigManager.m in Sources */,
+				7FC54B1E1623CA8400D6A4C3 /* MBProgressHUD.m in Sources */,
+				7FC54B211623CFBD00D6A4C3 /* CreateStatusViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

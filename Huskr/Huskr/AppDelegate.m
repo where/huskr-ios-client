@@ -57,6 +57,10 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//- (NSUInteger)supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+//    return UIInterfaceOrientationMaskPortrait;
+//}
+
 /*
 // Optional UITabBarControllerDelegate method.
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
