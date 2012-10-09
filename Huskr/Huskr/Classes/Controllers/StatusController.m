@@ -60,12 +60,7 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation
                                          JSONRequestOperationWithRequest:request
                                          success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-                                             //[[TFHUDManager sharedInstance] hideAllHUDsAnimated:NO];
                                              NSLog(@"JSON Response: %@", JSON);
-
-//                                             [[TFHUDManager sharedInstance] hideAllHUDsAnimated:NO];
-//                                             [[TFHUDManager sharedInstance] showNotificationWithText:@"Twitter sync'd"
-//                                                                                           imageType:TFHUDImageCheckMark];
                                              
                                              NSArray *jsonArray = JSON;
 
@@ -97,7 +92,43 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)createStatus:(Status *)status {
+    NSDictionary *postBodyDict = @{
+    @"status[title]" : status.title,
+    @"status[user_name]" : status.username};
     
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:[ConfigManager instance].apiBaseURL]];
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
+                                                            path:@"/api/v1/statuses.json"
+                                                      parameters:postBodyDict];
+    
+    NSLog(@"Creating a status with URL: %@", [request.URL absoluteString]);
+    
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation
+                                         JSONRequestOperationWithRequest:request
+                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                             NSLog(@"JSON Response: %@", JSON);
+                                             
+                                             NSArray *jsonArray = JSON;
+                                             
+                                             NSAssert([jsonArray isKindOfClass:[NSDictionary class]], @"Expect a dictionary as JSON response");
+                                             
+                                             // Alert the delegate
+                                             if ([self.delegate respondsToSelector:@selector(didCreateStatus:)]) {
+                                                 [self.delegate didCreateStatus:status];
+                                             }
+                                             
+                                         }
+                                         failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                             // Load failed :(
+                                             
+                                             // Alert the delegate
+                                             if ([self.delegate respondsToSelector:@selector(didFailStatusCreationForStatus:withError:)]) {
+                                                 [self.delegate didFailStatusCreationForStatus:status withError:error];
+                                             }
+                                         }];
+    [operation start];
+
 }
 
 @end

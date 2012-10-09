@@ -14,10 +14,19 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface CreateStatusViewController() <StatusControllerDelegate>
+@interface CreateStatusViewController() <StatusControllerDelegate,
+UITextFieldDelegate,
+UITextViewDelegate> {
+    
+}
 
+// UI
 @property (nonatomic, weak) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, weak) IBOutlet UITextView *statusTextView;
+@property (nonatomic, strong) MBProgressHUD *hud;
+
+// Data
+@property (nonatomic, strong) StatusController *statusController;
 
 @end
 
@@ -32,15 +41,21 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+        // UI
         self.title = NSLocalizedString(@"Post", @"Post");
         self.tabBarItem.image = [UIImage imageNamed:@"08-chat"];
+        
+        // Data
+        self.statusController = [[StatusController alloc] init];
+        self.statusController.delegate = self;
     }
     return self;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)dealloc {
-	
+	self.statusController.delegate = nil;
 }
 
 #pragma mark -
@@ -48,22 +63,37 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-}
 
+    // shhh... Taking a shortcut!
+    [(UIScrollView *)self.view setContentSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 300)];
+}
 
 #pragma mark -
 #pragma mark CreateStatusViewController
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (IBAction)postButtonPressed:(id)sender {
-    // Construct a status and tell our controller to create it.
+    // Show loading
+    [self.hud hide:NO];
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self.hud setLabelText:@"Loading..."];
+    self.hud.userInteractionEnabled = YES; // Intercepts touch
+    
+    [self.statusController loadStatuses];
+    
+    // Kick off request to create
+    Status *statusToCreate = [[Status alloc] init];
+    statusToCreate.title = self.statusTextView.text;
+    statusToCreate.username = self.usernameTextField.text;
+
+    [self.statusController createStatus:statusToCreate];
 }
 
 #pragma mark -
 #pragma mark StatusControllerDelegate
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)didCreateStatus:(Status *)status {
-    MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.hud hide:NO];
+    MBProgressHUD *HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 	[self.navigationController.view addSubview:HUD];
 	
 	// The sample image is based on the work by http://www.pixelpressicons.com, http://creativecommons.org/licenses/by/2.5/ca/
@@ -74,7 +104,7 @@
 	HUD.mode = MBProgressHUDModeCustomView;
 	
 	//HUD.delegate = self;
-	HUD.labelText = @"Completed";
+	HUD.labelText = @"Status posted!";
 	
 	[HUD show:YES];
 	[HUD hide:YES afterDelay:3];
@@ -85,6 +115,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)didFailStatusCreationForStatus:(Status *)status withError:(NSError *)error {
+    [self.hud hide:NO];
+
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not create status"
                                                     message:[error localizedDescription]
                                                    delegate:nil
@@ -93,5 +125,28 @@
     [alert show];
 }
 
+
+#pragma mark -
+#pragma mark UITextViewDelegate
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
+
+
+#pragma mark -
+#pragma mark UITextFieldDelegate
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.statusTextView becomeFirstResponder];
+
+    return YES;
+}
 
 @end
