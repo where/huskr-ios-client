@@ -62,6 +62,11 @@
 		7FADFAFD161D250900229010 /* StatusListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADFAFC161D250900229010 /* StatusListViewController.m */; };
 		7FADFB00161D259900229010 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADFAFF161D259900229010 /* Status.m */; };
 		7FADFB03161D294000229010 /* StatusTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADFB02161D294000229010 /* StatusTableCell.m */; };
+		7FC54AF91623B69800D6A4C3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC54AF41623B69800D6A4C3 /* Default.png */; };
+		7FC54AFA1623B69800D6A4C3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC54AF51623B69800D6A4C3 /* Default@2x.png */; };
+		7FC54AFC1623B69800D6A4C3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC54AF71623B69800D6A4C3 /* Icon.png */; };
+		7FC54AFD1623B69800D6A4C3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC54AF81623B69800D6A4C3 /* Icon@2x.png */; };
+		7FC54B0A1623B6D900D6A4C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC54B091623B6D900D6A4C3 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +186,11 @@
 		7FADFAFF161D259900229010 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		7FADFB01161D294000229010 /* StatusTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusTableCell.h; sourceTree = "<group>"; };
 		7FADFB02161D294000229010 /* StatusTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTableCell.m; sourceTree = "<group>"; };
+		7FC54AF41623B69800D6A4C3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7FC54AF51623B69800D6A4C3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7FC54AF71623B69800D6A4C3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		7FC54AF81623B69800D6A4C3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		7FC54B091623B6D900D6A4C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,6 +506,11 @@
 		7FADFAF8161D24CA00229010 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7FC54AF41623B69800D6A4C3 /* Default.png */,
+				7FC54AF51623B69800D6A4C3 /* Default@2x.png */,
+				7FC54B091623B6D900D6A4C3 /* Default-568h@2x.png */,
+				7FC54AF71623B69800D6A4C3 /* Icon.png */,
+				7FC54AF81623B69800D6A4C3 /* Icon@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -580,6 +595,11 @@
 				7FADFA17161D224800229010 /* second.png in Resources */,
 				7FADFA19161D224800229010 /* second@2x.png in Resources */,
 				7FADFA1F161D224800229010 /* SecondViewController.xib in Resources */,
+				7FC54AF91623B69800D6A4C3 /* Default.png in Resources */,
+				7FC54AFA1623B69800D6A4C3 /* Default@2x.png in Resources */,
+				7FC54AFC1623B69800D6A4C3 /* Icon.png in Resources */,
+				7FC54AFD1623B69800D6A4C3 /* Icon@2x.png in Resources */,
+				7FC54B0A1623B6D900D6A4C3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
