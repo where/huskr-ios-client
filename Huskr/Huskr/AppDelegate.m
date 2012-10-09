@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "SecondViewController.h"
 #import "StatusListViewController.h"
 #import "CreateStatusViewController.h"
 

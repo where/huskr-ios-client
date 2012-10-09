@@ -13,12 +13,6 @@
 		7FADF9FF161D224800229010 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FADF9FD161D224800229010 /* InfoPlist.strings */; };
 		7FADFA01161D224800229010 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADFA00161D224800229010 /* main.m */; };
 		7FADFA05161D224800229010 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADFA04161D224800229010 /* AppDelegate.m */; };
-		7FADFA10161D224800229010 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FADFA0F161D224800229010 /* first.png */; };
-		7FADFA12161D224800229010 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FADFA11161D224800229010 /* first@2x.png */; };
-		7FADFA15161D224800229010 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FADFA14161D224800229010 /* SecondViewController.m */; };
-		7FADFA17161D224800229010 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FADFA16161D224800229010 /* second.png */; };
-		7FADFA19161D224800229010 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FADFA18161D224800229010 /* second@2x.png */; };
-		7FADFA1F161D224800229010 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FADFA1D161D224800229010 /* SecondViewController.xib */; };
 		7FADFA27161D224800229010 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FADFA26161D224800229010 /* SenTestingKit.framework */; };
 		7FADFA28161D224800229010 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FADF9F4161D224800229010 /* UIKit.framework */; };
 		7FADFA29161D224800229010 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FADF9F6161D224800229010 /* Foundation.framework */; };
@@ -98,13 +92,6 @@
 		7FADFA02161D224800229010 /* Huskr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Huskr-Prefix.pch"; sourceTree = "<group>"; };
 		7FADFA03161D224800229010 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7FADFA04161D224800229010 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7FADFA0F161D224800229010 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		7FADFA11161D224800229010 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		7FADFA13161D224800229010 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		7FADFA14161D224800229010 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		7FADFA16161D224800229010 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		7FADFA18161D224800229010 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		7FADFA1E161D224800229010 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
 		7FADFA25161D224800229010 /* HuskrTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuskrTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FADFA26161D224800229010 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7FADFA2E161D224800229010 /* HuskrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HuskrTests-Info.plist"; sourceTree = "<group>"; };
@@ -275,13 +262,6 @@
 				7FADFAF8161D24CA00229010 /* Resources */,
 				7FADFA03161D224800229010 /* AppDelegate.h */,
 				7FADFA04161D224800229010 /* AppDelegate.m */,
-				7FADFA0F161D224800229010 /* first.png */,
-				7FADFA11161D224800229010 /* first@2x.png */,
-				7FADFA13161D224800229010 /* SecondViewController.h */,
-				7FADFA14161D224800229010 /* SecondViewController.m */,
-				7FADFA16161D224800229010 /* second.png */,
-				7FADFA18161D224800229010 /* second@2x.png */,
-				7FADFA1D161D224800229010 /* SecondViewController.xib */,
 				7FADF9FB161D224800229010 /* Supporting Files */,
 			);
 			path = Huskr;
@@ -636,11 +616,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FADF9FF161D224800229010 /* InfoPlist.strings in Resources */,
-				7FADFA10161D224800229010 /* first.png in Resources */,
-				7FADFA12161D224800229010 /* first@2x.png in Resources */,
-				7FADFA17161D224800229010 /* second.png in Resources */,
-				7FADFA19161D224800229010 /* second@2x.png in Resources */,
-				7FADFA1F161D224800229010 /* SecondViewController.xib in Resources */,
 				7FC54AF91623B69800D6A4C3 /* Default.png in Resources */,
 				7FC54AFA1623B69800D6A4C3 /* Default@2x.png in Resources */,
 				7FC54AFC1623B69800D6A4C3 /* Icon.png in Resources */,
@@ -689,7 +664,6 @@
 			files = (
 				7FADFA01161D224800229010 /* main.m in Sources */,
 				7FADFA05161D224800229010 /* AppDelegate.m in Sources */,
-				7FADFA15161D224800229010 /* SecondViewController.m in Sources */,
 				7FADFA99161D235F00229010 /* NICommonMetrics.m in Sources */,
 				7FADFA9A161D235F00229010 /* NIDataStructures.m in Sources */,
 				7FADFA9B161D235F00229010 /* NIDebuggingTools.m in Sources */,
@@ -757,14 +731,6 @@
 				7FADF9FE161D224800229010 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7FADFA1D161D224800229010 /* SecondViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FADFA1E161D224800229010 /* en */,
-			);
-			name = SecondViewController.xib;
 			sourceTree = "<group>";
 		};
 		7FADFA2F161D224800229010 /* InfoPlist.strings */ = {
