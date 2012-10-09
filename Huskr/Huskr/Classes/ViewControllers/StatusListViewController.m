@@ -48,7 +48,7 @@ StatusControllerDelegate> {
 	if (self) {
         // UI
         self.title = @"Timeline";
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.image = [UIImage imageNamed:@"179-notepad"];
         
         // Data
         self.statusController = [[StatusController alloc] init];

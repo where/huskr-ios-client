@@ -10,6 +10,7 @@
 
 #import "SecondViewController.h"
 #import "StatusListViewController.h"
+#import "CreateStatusViewController.h"
 
 @implementation AppDelegate
 
@@ -20,7 +21,7 @@
     UIViewController *viewController1 = [[StatusListViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
     
-    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    UIViewController *viewController2 = [[CreateStatusViewController alloc] initWithNibName:@"CreateStatusViewController" bundle:nil];
     
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[navController1, viewController2];
