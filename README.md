@@ -3,6 +3,22 @@ huskr-ios-client
 
 iOS client for a sample client-server architected app.
 
+Setup
+-----
+
+Pre-reqs:
+
+- Have a Mac running Lion.
+- Install Xcode 4.5. https://developer.apple.com/xcode/
+- Install git. http://git-scm.com/downloads
+- Get your github.com created and set up. https://github.com/
+
+Run the following commands in Terminal (you can copy & paste them in):
+
+    git clone git://github.com/where/huskr-ios-client.git
+    cd huskr-ios-client
+    git submodule update --init --recursive
+
 Next steps for features:
 ------------------------
 
