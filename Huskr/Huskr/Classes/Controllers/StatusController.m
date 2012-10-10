@@ -121,6 +121,7 @@
                                          }
                                          failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                              // Load failed :(
+                                             NSLog(@"JSON response: %@", JSON);
                                              
                                              // Alert the delegate
                                              if ([self.delegate respondsToSelector:@selector(didFailStatusCreationForStatus:withError:)]) {

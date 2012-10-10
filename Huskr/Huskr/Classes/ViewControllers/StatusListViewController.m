@@ -11,6 +11,7 @@
 #import "StatusController.h"
 #import "NimbusCore.h"
 #import "MBProgressHUD.h"
+#import "StatusTableCell.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -91,6 +92,8 @@ StatusControllerDelegate> {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:YES];
+    
+    self.tableView.frame = self.view.bounds;
 
 }
 
@@ -157,14 +160,14 @@ StatusControllerDelegate> {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellReuseID = @"StatusTableCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseID];
+    StatusTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellReuseID];
+        cell = [[StatusTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellReuseID];
     }
     
     // Configure cell
     Status *status = [self.fetchedStatuses objectAtIndex:indexPath.row];
-    cell.textLabel.text = status.title;
+    [cell setUpWithStatus:status];
     
     return cell;
 }
@@ -186,7 +189,9 @@ StatusControllerDelegate> {
 }
 
 // Variable height table cells
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 150;
+}
 
 @end
 
