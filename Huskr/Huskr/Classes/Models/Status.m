@@ -42,10 +42,20 @@
     Status *result = [[self alloc] init];
     
     result.objectID = [JSONDictionary objectForKey:@"id"];
-    result.title = [JSONDictionary objectForKey:@"title"];
-    result.username = [JSONDictionary objectForKey:@"user_name"];
+    
+    id titleValue = [JSONDictionary objectForKey:@"title"];
+    if (titleValue != nil && ![titleValue isKindOfClass:[NSNull class]]) {
+        result.title = titleValue;
+    }
+    
+    id usernameValue = [JSONDictionary objectForKey:@"user_name"];
+    if (usernameValue != nil && ![usernameValue isKindOfClass:[NSNull class]]) {
+        result.username = usernameValue;
+    }
     
     // TODO: Parse dates
+    
+    // 
     
     return result;
 }
